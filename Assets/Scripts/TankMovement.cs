@@ -16,19 +16,19 @@ public class TankMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 pos = transform.position;
+        Vector2 TankPosition = transform.position;
 
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            pos.x -= speed;
+            TankPosition.x -= speed;
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            pos.x += speed;
+            TankPosition.x += speed;
         }
 
-        transform.position = pos;
+        transform.position = TankPosition;
     }
 }

@@ -13,13 +13,12 @@ public class CannonMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = 0;
-        float mousePointer = mousePos.z;
-       
-        Vector3 rot = transform.eulerAngles;
-        rot.z += mousePointer;
-        
-        transform.eulerAngles += rot;
+
+        Vector3 MousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        float Incline = Vector3.Angle(MousePosition, transform.position);
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, Incline));
+
+
+
     }
 }
