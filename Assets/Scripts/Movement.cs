@@ -6,12 +6,10 @@ using UnityEngine.UIElements;
 public class Movement : MonoBehaviour
 {
     float speed = 0.002f;
-
     void Start()
     {
-        
-    }
 
+    }
     void Update()
     {
         Vector2 Position = transform.position;
@@ -29,5 +27,6 @@ public class Movement : MonoBehaviour
 
         transform.position = Position;
     }
+}
 
   
