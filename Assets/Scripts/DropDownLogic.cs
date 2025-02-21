@@ -1,21 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DropDownLogic : MonoBehaviour
 {
 
-    public
+    public TMP_Dropdown dropdown;
+    public SpriteRenderer CoinSprite;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        CoinSprite.sprite = dropdown.options[0].image;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnValueChanged(int index)
     {
-        
+        CoinSprite.sprite = dropdown.options[index].image;
     }
+
 }
