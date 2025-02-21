@@ -6,11 +6,12 @@ using UnityEngine.UI;
 
 public class Coin : MonoBehaviour
 {
-    public SpriteRenderer SpriteRenderer;
+    public SpriteRenderer CSpriteRenderer;
+    
     // Start is called before the first frame update
     void Start()
     {
-       
+    
     }
 
     // Update is called once per frame
