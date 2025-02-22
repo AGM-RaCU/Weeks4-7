@@ -7,11 +7,13 @@ using UnityEngine.UI;
 public class Coin : MonoBehaviour
 {
     public SpriteRenderer CSpriteRenderer;
-    public float Timer;
+    public float DespawnCount;
+    public float DespawnLimit;
 
     // Start is called before the first frame update
     void Start()
     {
+        DespawnLimit = Random.Range(1, 10);
         Vector2 Position = transform.position;
         Position.x = Random.Range(-10, 10);
         transform.position = Position;
@@ -20,6 +22,12 @@ public class Coin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Timer += Time.deltaTime;
+        DespawnCount += Time.deltaTime;
+        Debug.Log(DespawnCount);
+        if(DespawnCount >= DespawnLimit)
+        {
+            Destroy(gameObject);
+        }
+       
     }
 }

@@ -3,7 +3,9 @@ guid: cf50b05ec76bf5947b8a8a24204da050
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - CSpriteRenderer: {instanceID: 0}
+  - CoinsPrefab: {fileID: 2530101126247081036, guid: 062d1f4cfc992494288f0825d2b6b7d0, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
