@@ -22,6 +22,22 @@ public class UIMenu : MonoBehaviour
     public void OnSliderValueChanged(float TossForce)
     {
         Debug.Log(TossForce);
+
+        Vector2 Position = CoinsPrefab.transform.position;
+
+        if (TossForce == 0.0f)
+        {
+            Position.y = 1;
+        }
+        if (TossForce == 1.0f)
+        {
+            Position.y = 3;
+        }
+        if (TossForce == 2.0f)
+        { 
+            Position.y = 5;
+        }
+
     }
 
     public void OnValueChanged(int index)
